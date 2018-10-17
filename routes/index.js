@@ -4,7 +4,7 @@ const mailer = require('../helpers/mailer');
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  res.render('index');
+  res.render('form');
 });
 
 router.post('/', (req, res) => {
@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
       res.status(200).send('The mail was sent succesfully')
     })
     .catch(err => {
-      console.log('Somthing went wrong ', err);
+      console.log('Something went wrong ', err);
     });
 });
 
